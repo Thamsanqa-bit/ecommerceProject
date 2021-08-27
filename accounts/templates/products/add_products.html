@@ -1,0 +1,13 @@
+<head>
+    <title>{% block title %}add product| come let us code{% endblock %}</title>
+</head>
+<body>
+    <h1 class="title"> Add Product</h1>
+    <form method="post" action="" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button class="button is-dark is-uppercase">Submit</button>
+
+    </form>
+
+</body>

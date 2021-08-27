@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'images' %}">
+
+        <diV class="box">
+        <h2 class="is-size-3 mb-4">My Products </h2>
+
+        <a href="{% url 'add_product' %}" class="button is-dark is-uppercase mb-6">Add product</a>
+            <a href="{% url 'update_product' 'product.id' %}" class="button is-dark is-uppercase mb-6">Update Product</a>
+
+
+        {% if products %}
+        <table class="table is-full-width">
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Price</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                {% for product in products %}
+
+                <tr>
+                    <td>{{ product.title }}</td>
+                    <td>R{{ product.price }}</td>
+                </tr>
+
+                {% endfor %}
+            </tbody>
+        </table>
+        {% else %}
+        <p> don't have any products yet...</p>
+        {% endif %}
+         </diV>
+
+    <style>
+        #slider{
+            overflow: hidden;
+        }
+        #slider figure{
+            position: relative;
+            width: 500%;
+            margin: 0;
+            left:0;
+            animation: 10s slider infinite;
+        }
+        #slider figure img{
+            width: 13%;
+            float: left;
+        }
+        @keyframes slider{
+            0% {
+                left:0;
+            }
+            20% {
+                left: 0;
+            }
+            25% {
+                left: -100%
+            }
+            45% {
+                left: -100;
+            }
+            50% {
+                left: -200;
+            }
+            70% {
+                left: -200;
+            75% {
+                left: -300;
+            }
+            95% {
+                left: -300;
+            }
+            100% {
+                left: -400;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div id="slider">
+        <figure>
+            <img src="{% static 'images/g-1.jpg' %}">
+            <img src="{% static 'images/g-2.jpg' %}">
+            <img src="{% static 'images/g-3.jpg' %}">
+            <img src="{% static 'images/g-4.jpg' %}">
+            <img src="{% static 'images/g-5.jpg' %}">
+        </figure>
+    </div>
+
+</body>
+</html>

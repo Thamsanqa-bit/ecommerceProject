@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+</head>
+<body>
+    <div class="main">
+        <div class="navbar">
+            <div class="icon">
+                <h2 class="logo"> ThamiMbodla</h2>
+            </div>
+
+            <div class="menu">
+                <ul>
+                    <li><a href="{% url 'customer' %}">Services</a></li>
+                    <li><a href="#">About</a> </li>
+                    <li><a href="#">Contact</a> </li>
+                    <li><a href="#">Home</a> </li>
+
+                </ul>
+            </div>
+            <div class="search">
+                <input class="srch" type="search" name="" placeholder="Type your text">
+                <a href="#"><button class="btn">Search</button></a>
+            </div>
+
+        </div>
+        <div class="content">
+            <h1>Mdu Cleaning & Services <br><span>Quality and Quality</span> <br>Course</h1>
+            <p class="par">To our Loyal customers<br> <strong>Mdu Cleaning Services</strong> <br> X <br> BOOK IBHONI deliveries <br> have partners up to collect & deliver all your items</p>
+            <button class="cn"><a href="{% url 'become_customer' %}">Membership</a> </button>
+        </div>
+        <div class="form">
+            <h2>Login Here</h2>
+            <input class="email" name="email" placeholder="Enter email here">
+            <input class="password" name="" placeholder="Enter password here">
+            <button class="btnn"><a href="#">Login</a> </button>
+
+            <p class="link">Don't have an account?<br>
+            <a href="#">Sign Up here</a></p>
+            <p class="liw">Log in with</p>
+        </div>
+    </div>
+</body>
+</html>
+
+
+
+
